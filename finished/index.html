@@ -1,65 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
-    <title>Credit Card Form</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario</title>
+  </head>
+  <body>
     <main>
-        <section>
-            <div class="card">
-                <div class="card_tag">
-                    <div class="tag_chip">chip</div>
-                    <div class="card_company">VISA</div>
-                </div>
-                <p class="card_number">#### #### #### ####</p>
-                <div class="card_info">
-                    <div class="info_card-holder">
-                        <p>Card Holder</p>
-                        <p>FULL NAME</p>
-                    </div>
-                    <div class="info_card-exp-date">
-                        <p>Expires</p>
-                        <p>
-                            <span>MM</span>
-                            /
-                            <span>YY</span>
-                        </p>
-                    </div>
-                </div>
+      <section>
+        <h1>Checkout</h1>
+        <form>
+          <fieldset>
+            <h2>Datos personales</h2>
+            <div class="label-field">
+              <label>e-mail *</label>
+              <input type="email" placeholder="bob.ross@mail.com" />
+              <div>
+                <input
+                  type="checkbox"
+                  id="recieve_newsletter"
+                  name="recieve_newsletter"
+                  value="recibir"
+                />
+                <label for="recieve_newsletter">
+                  Deseo recibir el newsletter de la marca</label
+                >
+              </div>
             </div>
-            <form class="card-data-form">
-                <div class="every-field">
-                    <label>Card Number</label>
-                    <input type="text" placeholder="1234 5678 9012 3456">
+            <div class="label-field">
+              <h3>Si lo deseas, agrega una contraseña para crear una cuenta</h3>
+              <label>Contraseña</label>
+              <input type="password" />
+              <label>Verificar contraseña</label>
+              <input type="password" />
+              <ul>
+                <li>Debe contener mayúsculas y minúsculas</li>
+                <li>Debe tener más de 8 caracteres</li>
+              </ul>
+            </div>
+            <div class="label-field">
+              <label>Número de teléfono</label>
+              <input type="tel" placeholder="11 12345678" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <h2>Método de pago</h2>
+
+            <div class="label-field">
+                <label>Tipo de tarjeta</label>
+                <div>
+                    <input
+                      type="radio"
+                      id="tarjeta_debito"
+                      name="payment_method"
+                      value="tarjeta_debito"
+                    />
+                    <label for="tarjeta_debito">Tarjeta de débito</label><br />
                 </div>
-                <div class="every-field">
-                    <label>Card Holder</label>
-                    <input type="text" placeholder="jane marie doe">
+                <div>
+              <input
+                type="radio"
+                id="tarjeta_credito"
+                name="payment_method"
+                value="tarjeta_credito"
+              />
+              <label for="tarjeta_credito">Tarjeta de crédito</label><br />
+            </div>
+            </div>
+
+            <div class="card">
+              <div class="card_tag">
+                <div class="tag_chip">chip</div>
+                <div class="card_company">VISA</div>
+              </div>
+              <p class="card_number">#### #### #### ####</p>
+              <div class="card_info">
+                <div class="info_card-holder">
+                  <p>Titular</p>
+                  <p>BOB ROSS</p>
                 </div>
-                <div class="every-field card-info">
-                    <div class="card-info_exp">
-                        <label>Expiration Date</label>
-                        <div class="">
-                            <input type="text" placeholder="03">
-                            <span> / </span>
-                            <input type="text" placeholder="2021">
-                        </div>
-                    </div>
-                    <div class="every-field card-info_cvv">
-                        <label>CVV</label>
-                        <input type="text" placeholder="123" class="every-field_cvv">
-                    </div>
+                <div class="info_card-exp-date">
+                  <p>Fecha de expiración</p>
+                  <p>
+                    <span>MM</span>
+                    /
+                    <span>YY</span>
+                  </p>
                 </div>
-                <div class="every-field">
-                    <button class="card-data-form_submit-btn">Submit</button>
-                </div>
-            </form>
-        </section>
+              </div>
+            </div>
+
+            <div class="label-field">
+              <label>Número de la tarjeta *</label>
+              <input type="number" placeholder="1234 5678 9012 3456" />
+            </div>
+            <div class="label-field">
+              <label>Nombre del titular <span>(tal como se indica en la tarjeta)</span>*</label>
+              <input type="text" placeholder="Bob Ross" />
+            </div>
+            <div class="card-info_exp">
+              <label>Fecha de expiración *</label>
+              <div>
+                <input type="month" />
+              </div>
+            </div>
+            <div class="label-field">
+              <label>CVV *</label>
+              <input type="text" placeholder="123" class="every-field_cvv" />
+            </div>
+
+            <div class="label-field">
+              <label>Número de cuotas</label>
+              <select name="cuotas" id="cuotas">
+                <option value="1">1 cuota</option>
+                <option value="3">3 cuotas (sin interés)</option>
+                <option value="6">6 cuotas (sin interés)</option>
+                <option value="12">12 cuotas</option>
+              </select>
+            </div>
+          </fieldset>
+          <button class="card-data-form_submit-btn" type="submit">
+            Enviar
+          </button>
+        </form>
+      </section>
     </main>
-</body>
+  </body>
 </html>
