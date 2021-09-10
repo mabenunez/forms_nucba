@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+    <title>Credit Card Form</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="card">
+                <div class="card_tag">
+                    <div class="tag_chip">chip</div>
+                    <div class="card_company">VISA</div>
+                </div>
+                <p class="card_number">#### #### #### ####</p>
+                <div class="card_info">
+                    <div class="info_card-holder">
+                        <p>Card Holder</p>
+                        <p>FULL NAME</p>
+                    </div>
+                    <div class="info_card-exp-date">
+                        <p>Expires</p>
+                        <p>
+                            <span>MM</span>
+                            /
+                            <span>YY</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <form class="card-data-form">
+                <div class="every-field">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="every-field">
+                    <label>Card Holder</label>
+                    <input type="text" placeholder="jane marie doe">
+                </div>
+                <div class="every-field card-info">
+                    <div class="card-info_exp">
+                        <label>Expiration Date</label>
+                        <div class="">
+                            <input type="text" placeholder="03">
+                            <span> / </span>
+                            <input type="text" placeholder="2021">
+                        </div>
+                    </div>
+                    <div class="every-field card-info_cvv">
+                        <label>CVV</label>
+                        <input type="text" placeholder="123" class="every-field_cvv">
+                    </div>
+                </div>
+                <div class="every-field">
+                    <button class="card-data-form_submit-btn">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
